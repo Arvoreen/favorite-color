@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" data-framework="mithril">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= htmlWebpackPlugin.options.title || 'Webpack App'%></title>
+
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+    <% } %>
+</head>
+<body class="d-flex flex-column  text-center bg-light-subtle">
+<main class="flex-shrink-0">
+    <div class="cover-container d-flex w-100 p-3 mx-auto flex-column mb-15">
+        <section id="app" class="px-3"></section>
+    </div>
+</main>
+<footer id="info" class="fixed-bottom mt-auto py-3 bg-light text-black-50">
+    <div class="container">
+        <p>Double-click to edit a favorite, enter key will submit, escape to cancel</p>
+        <p>Created by Eduard Martinescu</a></p>
+    </div>
+</footer>
+<%= htmlWebpackPlugin.tags.bodyTags %>
+</body>
+</html>
